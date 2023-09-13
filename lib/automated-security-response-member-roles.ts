@@ -15,7 +15,7 @@ export class awsSharrMemberRolesStack extends NestedStack {
     const config = getConfig();
 
     const StacksProps : ResourceNestedStackProps = {
-      security_hub_admin_account : '457195997099', //config.Account
+      security_hub_admin_account : '<account_number>', //config.Account
     }
 
     const template = new cfninc.CfnInclude(this, 'Template', { 
