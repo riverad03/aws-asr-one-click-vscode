@@ -1,0 +1,19 @@
+{
+  "version": "29.0.0",
+  "files": {
+    "ca54430d9ec7c0271a2c0b170c581ddf90048fe42aa00c00b2dbd23f5ea0ff5e": {
+      "source": {
+        "path": "awsSharrAdminStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "ca54430d9ec7c0271a2c0b170c581ddf90048fe42aa00c00b2dbd23f5ea0ff5e.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

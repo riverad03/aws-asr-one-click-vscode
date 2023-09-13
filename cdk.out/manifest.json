@@ -1,0 +1,1308 @@
+{
+  "version": "29.0.0",
+  "artifacts": {
+    "awsSharrDeployStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "awsSharrDeployStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "awsSharrDeployStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "awsSharrDeployStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/2599469263811fbb92e42215fc867340edd71f3c8d8888c1c94f7acad87cee5a.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "awsSharrDeployStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "awsSharrDeployStack.assets"
+      ],
+      "metadata": {
+        "/awsSharrDeployStack/awsSharrAdminStack/Template": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Template"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/$Mappings/SourceCode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceCode"
+          },
+          {
+            "type": "aws:cdk:info",
+            "data": "Consider making this CfnMapping a lazy mapping by providing `lazy: true`: either no findInMap was called or every findInMap could be immediately resolved without using Fn::FindInMap",
+            "trace": [
+              "Annotations.addMessage (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1213)",
+              "Annotations.addInfo (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:682)",
+              "CfnMapping.informLazyUse (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1657)",
+              "CfnMapping._toCloudFormation (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1486)",
+              "/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3567",
+              "Object.findTokens (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/resolve.js:1:3591)",
+              "findAllReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3534)",
+              "Object.resolveReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:719)",
+              "Object.prepareApp (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/prepare-app.js:1:565)",
+              "Object.synthesize (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/synthesis.js:1:606)",
+              "App.synth (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/stage.js:1:1922)",
+              "process.<anonymous> (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/app.js:1:1355)",
+              "Object.onceWrapper (node:events:627:26)",
+              "process.emit (node:events:512:28)",
+              "process.emit (node:domain:489:12)",
+              "process.emit (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/source-map-support/source-map-support.js:485:21)"
+            ]
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/$Mappings/mappings": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mappings"
+          },
+          {
+            "type": "aws:cdk:info",
+            "data": "Consider making this CfnMapping a lazy mapping by providing `lazy: true`: either no findInMap was called or every findInMap could be immediately resolved without using Fn::FindInMap",
+            "trace": [
+              "Annotations.addMessage (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1213)",
+              "Annotations.addInfo (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:682)",
+              "CfnMapping.informLazyUse (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1657)",
+              "CfnMapping._toCloudFormation (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1486)",
+              "/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3567",
+              "Object.findTokens (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/resolve.js:1:3591)",
+              "findAllReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3534)",
+              "Object.resolveReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:719)",
+              "Object.prepareApp (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/prepare-app.js:1:565)",
+              "Object.synthesize (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/synthesis.js:1:606)",
+              "App.synth (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/stage.js:1:1922)",
+              "process.<anonymous> (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/app.js:1:1355)",
+              "Object.onceWrapper (node:events:627:26)",
+              "process.emit (node:events:512:28)",
+              "process.emit (node:domain:489:12)",
+              "process.emit (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/source-map-support/source-map-support.js:485:21)"
+            ]
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/$Mappings/ServiceprincipalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap"
+          },
+          {
+            "type": "aws:cdk:info",
+            "data": "Consider making this CfnMapping a lazy mapping by providing `lazy: true`: either no findInMap was called or every findInMap could be immediately resolved without using Fn::FindInMap",
+            "trace": [
+              "Annotations.addMessage (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1213)",
+              "Annotations.addInfo (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:682)",
+              "CfnMapping.informLazyUse (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1657)",
+              "CfnMapping._toCloudFormation (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1486)",
+              "/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3567",
+              "Object.findTokens (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/resolve.js:1:3591)",
+              "findAllReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3534)",
+              "Object.resolveReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:719)",
+              "Object.prepareApp (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/prepare-app.js:1:565)",
+              "Object.synthesize (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/synthesis.js:1:606)",
+              "App.synth (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/stage.js:1:1922)",
+              "process.<anonymous> (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/app.js:1:1355)",
+              "Object.onceWrapper (node:events:627:26)",
+              "process.emit (node:events:512:28)",
+              "process.emit (node:domain:489:12)",
+              "process.emit (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/source-map-support/source-map-support.js:485:21)"
+            ]
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/$Conditions/loadAFSBPCond": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "loadAFSBPCond"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/$Conditions/loadCIS120Cond": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "loadCIS120Cond"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/$Conditions/loadPCI321Cond": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "loadPCI321Cond"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SHARRkeyE6BD0F56": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRkeyE6BD0F56"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SHARRkeyAlias37E34763": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRkeyAlias37E34763"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SHARRKeyC551FE02": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRKeyC551FE02"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SHARRTopic229CFB9E": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRTopic229CFB9E"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SHARRSNSTopicB940F479": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRSNSTopicB940F479"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SHARRSendAnonymousMetricsCDAE439D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRSendAnonymousMetricsCDAE439D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SHARRversionAC0E4F96": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRversionAC0E4F96"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/SharrLambdaLayer5BF8F147": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SharrLambdaLayer5BF8F147"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/orchestratorRole46A9F242": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "orchestratorRole46A9F242"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/orchestratorPolicy8045810D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "orchestratorPolicy8045810D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/checkSSMDocState06AC440F": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "checkSSMDocState06AC440F"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/getApprovalRequirementE7F50E54": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getApprovalRequirementE7F50E54"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/execAutomation5D89E251": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "execAutomation5D89E251"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/monitorSSMExecStateB496B8AF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "monitorSSMExecStateB496B8AF"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/notifyRole40298120": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "notifyRole40298120"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/notifyPolicy320847DC": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "notifyPolicy320847DC"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/sendNotifications1367638A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "sendNotifications1367638A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/createCustomActionRoleF0047414": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "createCustomActionRoleF0047414"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/createCustomActionPolicyE424E925": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "createCustomActionPolicyE424E925"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/CreateCustomActionE7A973F5": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateCustomActionE7A973F5"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/orchestratorNestedLogStack4DD66790": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "orchestratorNestedLogStack4DD66790"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/orchestratorRole12B410FD": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "orchestratorRole12B410FD"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/orchestratorStateMachine77C3F8FB": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "orchestratorStateMachine77C3F8FB"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/orchestratorSHARROrchestratorArn0ACC7B05": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "orchestratorSHARROrchestratorArn0ACC7B05"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/RemediateWithSharrCustomActionABE4122A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediateWithSharrCustomActionABE4122A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/RemediateWithSharrEventsRuleRole4BE0B6FF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediateWithSharrEventsRuleRole4BE0B6FF"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/RemediateWithSharrEventsRuleRoleDefaultPolicy44783695": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediateWithSharrEventsRuleRoleDefaultPolicy44783695"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/RemediateWithSharrRemediateCustomAction40B496D2": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediateWithSharrRemediateCustomAction40B496D2"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/PlaybookAdminStackAFSBP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PlaybookAdminStackAFSBP"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/PlaybookAdminStackCIS120": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PlaybookAdminStackCIS120"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/Template/PlaybookAdminStackPCI321": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PlaybookAdminStackPCI321"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/SO0111-SHARR_Topic/9b713584.jwsite.onmicrosoft.com@amer.teams.ms/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SO0111SHARRTopic9b713584jwsiteonmicrosoftcomamerteamsms23A3513B"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrAdminStack.NestedStack/awsSharrAdminStack.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsSharrAdminStackNestedStackawsSharrAdminStackNestedStackResourceE432D913"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Template"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/$Mappings/ServiceprincipalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap"
+          },
+          {
+            "type": "aws:cdk:info",
+            "data": "Consider making this CfnMapping a lazy mapping by providing `lazy: true`: either no findInMap was called or every findInMap could be immediately resolved without using Fn::FindInMap",
+            "trace": [
+              "Annotations.addMessage (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1213)",
+              "Annotations.addInfo (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:682)",
+              "CfnMapping.informLazyUse (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1657)",
+              "CfnMapping._toCloudFormation (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1486)",
+              "/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3567",
+              "Object.findTokens (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/resolve.js:1:3591)",
+              "findAllReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3534)",
+              "Object.resolveReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:719)",
+              "Object.prepareApp (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/prepare-app.js:1:565)",
+              "Object.synthesize (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/synthesis.js:1:606)",
+              "App.synth (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/stage.js:1:1922)",
+              "process.<anonymous> (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/app.js:1:1355)",
+              "Object.onceWrapper (node:events:627:26)",
+              "process.emit (node:events:512:28)",
+              "process.emit (node:domain:489:12)",
+              "process.emit (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/source-map-support/source-map-support.js:485:21)"
+            ]
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/OrchestratorMemberRoleMemberAccountRoleBE9AD9D5": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OrchestratorMemberRoleMemberAccountRoleBE9AD9D5"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleCreateCloudTrailMultiRegionTrailMemberAccountRoleF70577FF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleCreateCloudTrailMultiRegionTrailMemberAccountRoleF70577FF"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyCreateCloudTrailMultiRegionTrail59B12044": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyCreateCloudTrailMultiRegionTrail59B12044"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleCreateCloudTrailMultiRegionTrailSHARRMemberBasePolicyA86222AF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleCreateCloudTrailMultiRegionTrailSHARRMemberBasePolicyA86222AF"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleCreateLogMetricFilterAndAlarmMemberAccountRoleAA3E3C8A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleCreateLogMetricFilterAndAlarmMemberAccountRoleAA3E3C8A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyCreateLogMetricFilterAndAlarm102AC980": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyCreateLogMetricFilterAndAlarm102AC980"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleCreateLogMetricFilterAndAlarmSHARRMemberBasePolicy2AFEEF94": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleCreateLogMetricFilterAndAlarmSHARRMemberBasePolicy2AFEEF94"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAutoScalingGroupELBHealthCheckMemberAccountRole03AE4AEA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAutoScalingGroupELBHealthCheckMemberAccountRole03AE4AEA"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableAutoScalingGroupELBHealthCheckD6F46CE8": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableAutoScalingGroupELBHealthCheckD6F46CE8"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAutoScalingGroupELBHealthCheckSHARRMemberBasePolicy3ED01525": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAutoScalingGroupELBHealthCheckSHARRMemberBasePolicy3ED01525"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAWSConfigMemberAccountRole3914B25F": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAWSConfigMemberAccountRole3914B25F"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableAWSConfig8A0259D3": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableAWSConfig8A0259D3"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAWSConfigSHARRMemberBasePolicy535B8C0F": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAWSConfigSHARRMemberBasePolicy535B8C0F"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/ctcwremediationrole7AB69D0B": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ctcwremediationrole7AB69D0B"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCloudTrailToCloudWatchLoggingMemberAccountRoleE7E9C206": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCloudTrailToCloudWatchLoggingMemberAccountRoleE7E9C206"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableCloudTrailToCloudWatchLoggingA9BBB945": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableCloudTrailToCloudWatchLoggingA9BBB945"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCloudTrailToCloudWatchLoggingSHARRMemberBasePolicy0E4130D5": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCloudTrailToCloudWatchLoggingSHARRMemberBasePolicy0E4130D5"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCloudTrailEncryptionMemberAccountRoleA936699B": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCloudTrailEncryptionMemberAccountRoleA936699B"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableCloudTrailEncryption5715DA83": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableCloudTrailEncryption5715DA83"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCloudTrailEncryptionSHARRMemberBasePolicy6489774E": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCloudTrailEncryptionSHARRMemberBasePolicy6489774E"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableDefaultEncryptionS3MemberAccountRoleD9D87C04": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableDefaultEncryptionS3MemberAccountRoleD9D87C04"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableDefaultEncryptionS37717FB1C": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableDefaultEncryptionS37717FB1C"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableDefaultEncryptionS3SHARRMemberBasePolicyB6B36B9A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableDefaultEncryptionS3SHARRMemberBasePolicyB6B36B9A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableVPCFlowLogsMemberAccountRoleB79F3729": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableVPCFlowLogsMemberAccountRoleB79F3729"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableVPCFlowLogs22F36069": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableVPCFlowLogs22F36069"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/EnableVPCFlowLogsremediationrole00848CDF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EnableVPCFlowLogsremediationrole00848CDF"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableVPCFlowLogsSHARRMemberBasePolicy0D33A918": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableVPCFlowLogsSHARRMemberBasePolicy0D33A918"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleCreateAccessLoggingBucketMemberAccountRole3E1569D8": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleCreateAccessLoggingBucketMemberAccountRole3E1569D8"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyCreateAccessLoggingBucket4A1677D6": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyCreateAccessLoggingBucket4A1677D6"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleCreateAccessLoggingBucketSHARRMemberBasePolicy0B9908F2": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleCreateAccessLoggingBucketSHARRMemberBasePolicy0B9908F2"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleMakeEBSSnapshotsPrivateMemberAccountRoleFA05CFAF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleMakeEBSSnapshotsPrivateMemberAccountRoleFA05CFAF"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyMakeEBSSnapshotsPrivate64D2F13D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyMakeEBSSnapshotsPrivate64D2F13D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleMakeEBSSnapshotsPrivateSHARRMemberBasePolicy7DE85B9C": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleMakeEBSSnapshotsPrivateSHARRMemberBasePolicy7DE85B9C"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleMakeRDSSnapshotPrivateMemberAccountRole6760FE6D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleMakeRDSSnapshotPrivateMemberAccountRole6760FE6D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyMakeRDSSnapshotPrivate26FDF037": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyMakeRDSSnapshotPrivate26FDF037"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleMakeRDSSnapshotPrivateSHARRMemberBasePolicyFF0FBF31": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleMakeRDSSnapshotPrivateSHARRMemberBasePolicyFF0FBF31"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRemoveLambdaPublicAccessMemberAccountRoleB266862C": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRemoveLambdaPublicAccessMemberAccountRoleB266862C"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyRemoveLambdaPublicAccessDD6213D0": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyRemoveLambdaPublicAccessDD6213D0"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRemoveLambdaPublicAccessSHARRMemberBasePolicy6AACE4BE": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRemoveLambdaPublicAccessSHARRMemberBasePolicy6AACE4BE"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRevokeUnrotatedKeysMemberAccountRoleBC193A84": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRevokeUnrotatedKeysMemberAccountRoleBC193A84"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyRevokeUnrotatedKeys7F92ECED": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyRevokeUnrotatedKeys7F92ECED"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRevokeUnrotatedKeysSHARRMemberBasePolicy493293CA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRevokeUnrotatedKeysSHARRMemberBasePolicy493293CA"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleSetSSLBucketPolicyMemberAccountRoleD6BB5274": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleSetSSLBucketPolicyMemberAccountRoleD6BB5274"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicySetSSLBucketPolicy2B2017FE": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicySetSSLBucketPolicy2B2017FE"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleSetSSLBucketPolicySHARRMemberBasePolicy21EBF952": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleSetSSLBucketPolicySHARRMemberBasePolicy21EBF952"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleReplaceCodeBuildClearTextCredentialsMemberAccountRoleAEEA6C96": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleReplaceCodeBuildClearTextCredentialsMemberAccountRoleAEEA6C96"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyReplaceCodeBuildClearTextCredentials399A9B2A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyReplaceCodeBuildClearTextCredentials399A9B2A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleReplaceCodeBuildClearTextCredentialsSHARRMemberBasePolicy93CBC55E": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleReplaceCodeBuildClearTextCredentialsSHARRMemberBasePolicy93CBC55E"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleS3BlockDenylistMemberAccountRoleDFABBAB3": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleS3BlockDenylistMemberAccountRoleDFABBAB3"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyS3BlockDenylist2115A636": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyS3BlockDenylist2115A636"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleS3BlockDenylistSHARRMemberBasePolicyFEAC9691": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleS3BlockDenylistSHARRMemberBasePolicyFEAC9691"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEncryptRDSSnapshotMemberAccountRole5D2C905F": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEncryptRDSSnapshotMemberAccountRole5D2C905F"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEncryptRDSSnapshot27491BE0": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEncryptRDSSnapshot27491BE0"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEncryptRDSSnapshotSHARRMemberBasePolicyB377E8DA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEncryptRDSSnapshotSHARRMemberBasePolicyB377E8DA"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleDisablePublicAccessToRedshiftClusterMemberAccountRole87AA27A6": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleDisablePublicAccessToRedshiftClusterMemberAccountRole87AA27A6"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyDisablePublicAccessToRedshiftCluster6F8CE9CA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyDisablePublicAccessToRedshiftCluster6F8CE9CA"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleDisablePublicAccessToRedshiftClusterSHARRMemberBasePolicy071786CD": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleDisablePublicAccessToRedshiftClusterSHARRMemberBasePolicy071786CD"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableRedshiftClusterAuditLoggingMemberAccountRoleD7AC224E": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableRedshiftClusterAuditLoggingMemberAccountRoleD7AC224E"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableRedshiftClusterAuditLogging37BC8505": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableRedshiftClusterAuditLogging37BC8505"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableRedshiftClusterAuditLoggingSHARRMemberBasePolicyFB2EC252": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableRedshiftClusterAuditLoggingSHARRMemberBasePolicyFB2EC252"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAutomaticVersionUpgradeOnRedshiftClusterMemberAccountRoleADCE761E": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAutomaticVersionUpgradeOnRedshiftClusterMemberAccountRoleADCE761E"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableAutomaticVersionUpgradeOnRedshiftCluster4644F616": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableAutomaticVersionUpgradeOnRedshiftCluster4644F616"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAutomaticVersionUpgradeOnRedshiftClusterSHARRMemberBasePolicyFEA51B64": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAutomaticVersionUpgradeOnRedshiftClusterSHARRMemberBasePolicyFEA51B64"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAutomaticSnapshotsOnRedshiftClusterMemberAccountRole13857606": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAutomaticSnapshotsOnRedshiftClusterMemberAccountRole13857606"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableAutomaticSnapshotsOnRedshiftCluster2DE51374": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableAutomaticSnapshotsOnRedshiftCluster2DE51374"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableAutomaticSnapshotsOnRedshiftClusterSHARRMemberBasePolicyB55A3D11": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableAutomaticSnapshotsOnRedshiftClusterSHARRMemberBasePolicyB55A3D11"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleConfigureS3BucketLoggingMemberAccountRoleE068390D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleConfigureS3BucketLoggingMemberAccountRoleE068390D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyConfigureS3BucketLogging9F85EEE2": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyConfigureS3BucketLogging9F85EEE2"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleConfigureS3BucketLoggingSHARRMemberBasePolicyAC4F82A8": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleConfigureS3BucketLoggingSHARRMemberBasePolicyAC4F82A8"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleDisablePublicAccessForSecurityGroupMemberAccountRole3BED8BF4": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleDisablePublicAccessForSecurityGroupMemberAccountRole3BED8BF4"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyDisablePublicAccessForSecurityGroupE214EF9A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyDisablePublicAccessForSecurityGroupE214EF9A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleDisablePublicAccessForSecurityGroupSHARRMemberBasePolicy3076FC8A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleDisablePublicAccessForSecurityGroupSHARRMemberBasePolicy3076FC8A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleConfigureS3BucketPublicAccessBlockMemberAccountRoleC78F6EE7": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleConfigureS3BucketPublicAccessBlockMemberAccountRoleC78F6EE7"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyConfigureS3BucketPublicAccessBlock2E4EF13D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyConfigureS3BucketPublicAccessBlock2E4EF13D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleConfigureS3BucketPublicAccessBlockSHARRMemberBasePolicyB9DCBD99": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleConfigureS3BucketPublicAccessBlockSHARRMemberBasePolicyB9DCBD99"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleConfigureS3PublicAccessBlockMemberAccountRole98A4BC1D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleConfigureS3PublicAccessBlockMemberAccountRole98A4BC1D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyConfigureS3PublicAccessBlockEAD9CA55": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyConfigureS3PublicAccessBlockEAD9CA55"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleConfigureS3PublicAccessBlockSHARRMemberBasePolicy26BF29A6": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleConfigureS3PublicAccessBlockSHARRMemberBasePolicy26BF29A6"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCloudTrailLogFileValidationMemberAccountRole3F5F7157": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCloudTrailLogFileValidationMemberAccountRole3F5F7157"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableCloudTrailLogFileValidation00359A88": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableCloudTrailLogFileValidation00359A88"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCloudTrailLogFileValidationSHARRMemberBasePolicy85A07C2D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCloudTrailLogFileValidationSHARRMemberBasePolicy85A07C2D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableEbsEncryptionByDefaultMemberAccountRoleDF17FF59": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableEbsEncryptionByDefaultMemberAccountRoleDF17FF59"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableEbsEncryptionByDefaultED8BC775": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableEbsEncryptionByDefaultED8BC775"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableEbsEncryptionByDefaultSHARRMemberBasePolicy77CF4834": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableEbsEncryptionByDefaultSHARRMemberBasePolicy77CF4834"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableEnhancedMonitoringOnRDSInstanceMemberAccountRoleB3EFCB99": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableEnhancedMonitoringOnRDSInstanceMemberAccountRoleB3EFCB99"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableEnhancedMonitoringOnRDSInstance6E7C63B0": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableEnhancedMonitoringOnRDSInstance6E7C63B0"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableEnhancedMonitoringOnRDSInstanceSHARRMemberBasePolicy4D03FBD0": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableEnhancedMonitoringOnRDSInstanceSHARRMemberBasePolicy4D03FBD0"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/Rds6EnhancedMonitoringRole2FD1E9A5": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Rds6EnhancedMonitoringRole2FD1E9A5"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/Rds6EnhancedMonitoringRoleRDS6EnhancedMonitoringPolicyA2EB4EE9": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Rds6EnhancedMonitoringRoleRDS6EnhancedMonitoringPolicyA2EB4EE9"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableKeyRotationMemberAccountRole2366F17F": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableKeyRotationMemberAccountRole2366F17F"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableKeyRotation7DBFDFE8": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableKeyRotation7DBFDFE8"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableKeyRotationSHARRMemberBasePolicyA6E832D4": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableKeyRotationSHARRMemberBasePolicyA6E832D4"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableRDSClusterDeletionProtectionMemberAccountRole019A1667": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableRDSClusterDeletionProtectionMemberAccountRole019A1667"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableRDSClusterDeletionProtectionBC66754B": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableRDSClusterDeletionProtectionBC66754B"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableRDSClusterDeletionProtectionSHARRMemberBasePolicy90D2EA44": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableRDSClusterDeletionProtectionSHARRMemberBasePolicy90D2EA44"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCopyTagsToSnapshotOnRDSClusterMemberAccountRole026ECDEE": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCopyTagsToSnapshotOnRDSClusterMemberAccountRole026ECDEE"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableCopyTagsToSnapshotOnRDSClusterC9C3E856": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableCopyTagsToSnapshotOnRDSClusterC9C3E856"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableCopyTagsToSnapshotOnRDSClusterSHARRMemberBasePolicy5F24C304": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableCopyTagsToSnapshotOnRDSClusterSHARRMemberBasePolicy5F24C304"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableRDSInstanceDeletionProtectionMemberAccountRole105E9511": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableRDSInstanceDeletionProtectionMemberAccountRole105E9511"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableRDSInstanceDeletionProtection908386A3": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableRDSInstanceDeletionProtection908386A3"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableRDSInstanceDeletionProtectionSHARRMemberBasePolicy5071CD93": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableRDSInstanceDeletionProtectionSHARRMemberBasePolicy5071CD93"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableMultiAZOnRDSInstanceMemberAccountRoleE0F45AF6": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableMultiAZOnRDSInstanceMemberAccountRoleE0F45AF6"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableMultiAZOnRDSInstance3A3D7BEA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableMultiAZOnRDSInstance3A3D7BEA"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableMultiAZOnRDSInstanceSHARRMemberBasePolicy1DE61917": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableMultiAZOnRDSInstanceSHARRMemberBasePolicy1DE61917"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRemoveVPCDefaultSecurityGroupRulesMemberAccountRole406D320B": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRemoveVPCDefaultSecurityGroupRulesMemberAccountRole406D320B"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyRemoveVPCDefaultSecurityGroupRules94040124": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyRemoveVPCDefaultSecurityGroupRules94040124"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRemoveVPCDefaultSecurityGroupRulesSHARRMemberBasePolicy18B08253": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRemoveVPCDefaultSecurityGroupRulesSHARRMemberBasePolicy18B08253"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRevokeUnusedIAMUserCredentialsMemberAccountRole5C008B43": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRevokeUnusedIAMUserCredentialsMemberAccountRole5C008B43"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyRevokeUnusedIAMUserCredentialsEEF45939": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyRevokeUnusedIAMUserCredentialsEEF45939"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleRevokeUnusedIAMUserCredentialsSHARRMemberBasePolicy6519E750": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleRevokeUnusedIAMUserCredentialsSHARRMemberBasePolicy6519E750"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleSetIAMPasswordPolicyMemberAccountRoleA1FF47B4": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleSetIAMPasswordPolicyMemberAccountRoleA1FF47B4"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicySetIAMPasswordPolicy044BED0C": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicySetIAMPasswordPolicy044BED0C"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleSetIAMPasswordPolicySHARRMemberBasePolicy3E89D2C9": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleSetIAMPasswordPolicySHARRMemberBasePolicy3E89D2C9"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleDisablePublicAccessToRDSInstanceMemberAccountRole7E0A6680": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleDisablePublicAccessToRDSInstanceMemberAccountRole7E0A6680"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyDisablePublicAccessToRDSInstance0F21A96A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyDisablePublicAccessToRDSInstance0F21A96A"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleDisablePublicAccessToRDSInstanceSHARRMemberBasePolicyD50CB3CA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleDisablePublicAccessToRDSInstanceSHARRMemberBasePolicyD50CB3CA"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableMinorVersionUpgradeOnRDSDBInstanceMemberAccountRole66157FBF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableMinorVersionUpgradeOnRDSDBInstanceMemberAccountRole66157FBF"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/SHARRRemediationPolicyEnableMinorVersionUpgradeOnRDSDBInstance8FBADA19": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationPolicyEnableMinorVersionUpgradeOnRDSDBInstance8FBADA19"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/Template/RemediationRoleEnableMinorVersionUpgradeOnRDSDBInstanceSHARRMemberBasePolicyCB8B3F14": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RemediationRoleEnableMinorVersionUpgradeOnRDSDBInstanceSHARRMemberBasePolicyCB8B3F14"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberRolesStack.NestedStack/awsSharrMemberRolesStack.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsSharrMemberRolesStackNestedStackawsSharrMemberRolesStackNestedStackResourceECB29F04"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Template"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/$Mappings/SourceCode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceCode"
+          },
+          {
+            "type": "aws:cdk:info",
+            "data": "Consider making this CfnMapping a lazy mapping by providing `lazy: true`: either no findInMap was called or every findInMap could be immediately resolved without using Fn::FindInMap",
+            "trace": [
+              "Annotations.addMessage (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1213)",
+              "Annotations.addInfo (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/annotations.js:1:682)",
+              "CfnMapping.informLazyUse (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1657)",
+              "CfnMapping._toCloudFormation (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/cfn-mapping.js:1:1486)",
+              "/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3567",
+              "Object.findTokens (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/resolve.js:1:3591)",
+              "findAllReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:3534)",
+              "Object.resolveReferences (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:719)",
+              "Object.prepareApp (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/prepare-app.js:1:565)",
+              "Object.synthesize (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/private/synthesis.js:1:606)",
+              "App.synth (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/stage.js:1:1922)",
+              "process.<anonymous> (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/aws-cdk-lib/core/lib/app.js:1:1355)",
+              "Object.onceWrapper (node:events:627:26)",
+              "process.emit (node:events:512:28)",
+              "process.emit (node:domain:489:12)",
+              "process.emit (/home/darrivera/Downloads/experimental-repos/aws-cdk-vscode-example/node_modules/source-map-support/source-map-support.js:485:21)"
+            ]
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/$Conditions/EnableS3BucketForRedShift4": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EnableS3BucketForRedShift4"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/$Conditions/loadAFSBPCond": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "loadAFSBPCond"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/$Conditions/loadCIS120Cond": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "loadCIS120Cond"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/$Conditions/loadPCI321Cond": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "loadPCI321Cond"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/S3BucketForRedShiftAuditLogging652E7355": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3BucketForRedShiftAuditLogging652E7355"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/S3BucketForRedShiftAuditLoggingBucketPolicyAB8BAA40": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3BucketForRedShiftAuditLoggingBucketPolicyAB8BAA40"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/SHARRRemediationKeyE744743D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationKeyE744743D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/SHARRRemediationKeyAlias5531874D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRRemediationKeyAlias5531874D"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/SHARRKeyAliasEBF509D8": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRKeyAliasEBF509D8"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/SHARRMemberVersionEDAB5C42": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SHARRMemberVersionEDAB5C42"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/SSMParameterLogGroupName47918519": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSMParameterLogGroupName47918519"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/SSMParameterForS34EncryptionKeyAlias73DD8A98": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSMParameterForS34EncryptionKeyAlias73DD8A98"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/SSMParameterForS3BucketNameForREDSHIFT441DD36B1": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSMParameterForS3BucketNameForREDSHIFT441DD36B1"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/RunbookStackNoRoles": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RunbookStackNoRoles"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/PlaybookMemberStackAFSBP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PlaybookMemberStackAFSBP"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/PlaybookMemberStackCIS120": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PlaybookMemberStackCIS120"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/Template/PlaybookMemberStackPCI321": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PlaybookMemberStackPCI321"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/awsSharrDeployStack/awsSharrMemberStack.NestedStack/awsSharrMemberStack.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsSharrMemberStackNestedStackawsSharrMemberStackNestedStackResourceA43E2E8C"
+          }
+        ],
+        "/awsSharrDeployStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/awsSharrDeployStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/awsSharrDeployStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/awsSharrDeployStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "awsSharrDeployStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

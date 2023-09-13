@@ -1,0 +1,3 @@
+{
+  "app": "npx ts-node bin/automated-security-response-deploy.ts"
+}
