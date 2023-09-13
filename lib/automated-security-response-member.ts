@@ -20,7 +20,7 @@ export class awsSharrMemberStack extends NestedStack {
     const config = getConfig();
 
     const StacksProps : ResourceNestedStackProps = {
-      security_hub_admin_account : '457195997099', //config.Account
+      security_hub_admin_account : '<account_number>', //config.Account
       log_group_name : 	"asr-member-cft-metricfilters-alarms", //config.asrLogGroupName - have to look to see if the account has a CW Log Grp 
       load_PCI321_member_stack : "no", //config.asrLoadPCI321MemberStack
       load_CIS120_member_stack : "no", //config.asrLoadCIS120MemberStack
